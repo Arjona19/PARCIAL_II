@@ -1,0 +1,6 @@
+C:\Users\Alejandro\source\repos\PROYECTO_UNIDAD_III\proyecto\PARCIAL_II\Sopa_de_Letras\bin\Debug\Sopa_de_Letras.exe.config
+C:\Users\Alejandro\source\repos\PROYECTO_UNIDAD_III\proyecto\PARCIAL_II\Sopa_de_Letras\bin\Debug\Sopa_de_Letras.exe
+C:\Users\Alejandro\source\repos\PROYECTO_UNIDAD_III\proyecto\PARCIAL_II\Sopa_de_Letras\bin\Debug\Sopa_de_Letras.pdb
+C:\Users\Alejandro\source\repos\PROYECTO_UNIDAD_III\proyecto\PARCIAL_II\Sopa_de_Letras\obj\Debug\Sopa_de_Letras.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro\source\repos\PROYECTO_UNIDAD_III\proyecto\PARCIAL_II\Sopa_de_Letras\obj\Debug\Sopa_de_Letras.exe
+C:\Users\Alejandro\source\repos\PROYECTO_UNIDAD_III\proyecto\PARCIAL_II\Sopa_de_Letras\obj\Debug\Sopa_de_Letras.pdb
