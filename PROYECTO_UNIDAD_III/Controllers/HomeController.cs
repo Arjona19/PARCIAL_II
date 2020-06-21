@@ -11,19 +11,30 @@ namespace PROYECTO_UNIDAD_III.Controllers
         public ActionResult Index()
         {
             return View();
-        }
+        } 
 
-        public ActionResult About()
+        public ActionResult Contacto()
         {
-            ViewBag.Message = "Your contact page";
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Nosotros()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
+        public ActionResult Mision()
+        {
+            return View();
+        } 
+        public ActionResult Vision()
+        {
+            return View();
+        }  
+        public ActionResult Portafolio()
+        {
+            return View();
+        }
+
+       
     }
 }
