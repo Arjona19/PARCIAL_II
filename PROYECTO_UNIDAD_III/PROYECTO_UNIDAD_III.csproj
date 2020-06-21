@@ -221,7 +221,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <EntityDeploy Include="ZapateriaYucatan.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -236,12 +235,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Contacto.cshtml" />
     <Content Include="Views\Home\Nosotros.cshtml" />
     <Content Include="Views\Home\Mision.cshtml" />
     <Content Include="Views\Home\Vision.cshtml" />
     <Content Include="Views\Home\Portafolio.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
