@@ -1,0 +1,40 @@
+﻿@model PROYECTO_UNIDAD_III.Empresa
+@{
+    ViewBag.Title = "Vision";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!-- Page Heading -->
+<div class="container">
+    <!-- About Section Heading-->
+    <h2 class="page-section-heading text-center text-uppercase text-gray-800">NUESTRA VISION</h2>
+    <!-- Icon Divider-->
+    <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="text-gray-800 fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+    </div>
+    <!-- About Section Content-->
+    @using (Html.BeginForm("EditVision", "Admin"))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.ID)
+        <div class="form-group  d-sm-flex align-items-center justify-content-between mr-3 ml-3">
+            <h3 class="h3 mb-0 text-gray-800">Describe una vision para tu empresa</h3>
+            <button type="submit" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-edit fa-sm text-white-50"></i> Modificar</button>
+        </div>
+        <div class="col-md-12">
+            @Html.TextAreaFor(model => model.VIsion, htmlAttributes: new { @class = "form-control", @rows = 7 })
+        </div>
+    }
+    @if (ViewBag.Message != null)
+    {
+        <script type="text/javascript">
+                window.onload = function () {
+                alert("@ViewBag.Message");
+                };
+        </script>
+
+    }
+</div>
+

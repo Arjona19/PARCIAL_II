@@ -1,8 +1,9 @@
-﻿
+﻿@model PROYECTO_UNIDAD_III.Empresa
 @{
     ViewBag.Title = "Mision";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <!-- About Section-->
 <section class="page-section bg-primary text-white mb-0" id="about">
     <div class="container">
@@ -18,7 +19,7 @@
         <div class="row">
             <div class="col-lg-12 ml-auto">
                 <p class="lead">
-                    Ofrecer excelente servicio a nuestros clientes, además de protección, elegancia, distinción, confort y variedad a través de la comercialización de calzado de óptima calidad para toda la familia a precios accesibles, generando satisfacción en el público consumidor y lealtad a nuestra marca, trayendo como consecuencia la producción permanente de fuentes de trabajo tanto en nuestra empresa como en la de nuestros proveedores, además de utilidad para nuestros accionistas. Cumpliendo nuestra misión creamos polos de desarrollo integral para todos y cada uno de nuestros empleados y por ende de sus familias.
+                    @Model.Mision
                 </p>
             </div>
 

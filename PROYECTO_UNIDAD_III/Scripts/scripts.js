@@ -66,4 +66,10 @@
     });
   
   })(jQuery); // End of use strict
-  
+$(document).ready(function () {
+
+    $("#showToast").click(function () {
+        $('.toast').toast('show');
+    });
+
+});
