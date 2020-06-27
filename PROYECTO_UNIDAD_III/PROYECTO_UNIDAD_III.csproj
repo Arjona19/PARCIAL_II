@@ -46,6 +46,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=9.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>packages\AutoMapper.9.0.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -210,6 +213,7 @@
     </Compile>
     <Compile Include="Models\EmpresaModel.cs" />
     <Compile Include="Models\MisionsController.cs" />
+    <Compile Include="Models\PortafolioPartialModel.cs" />
     <Compile Include="Portafolio.cs">
       <DependentUpon>ZapateriaYuc.tt</DependentUpon>
     </Compile>
@@ -2138,6 +2142,8 @@
     <Content Include="ZapateriaYuc.edmx.diagram">
       <DependentUpon>ZapateriaYuc.edmx</DependentUpon>
     </Content>
+    <Content Include="Views\Admin\Add.cshtml" />
+    <Content Include="Views\Admin\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

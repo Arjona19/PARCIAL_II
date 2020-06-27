@@ -18,5 +18,6 @@ namespace PROYECTO_UNIDAD_III
         public string NombreProducto { get; set; }
         public string Detalles { get; set; }
         public Nullable<double> Precio { get; set; }
+        public byte[] Foto { get; set; }
     }
 }

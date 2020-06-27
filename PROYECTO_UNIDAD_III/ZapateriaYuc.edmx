@@ -9,11 +9,11 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nombre" Type="varchar" MaxLength="1000" />
           <Property Name="Mision" Type="varchar" MaxLength="1000" />
           <Property Name="VIsion" Type="varchar" MaxLength="1000" />
           <Property Name="Nosotros" Type="varchar" MaxLength="1000" />
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <EntityType Name="Portafolio">
           <Key>
@@ -23,6 +23,7 @@
           <Property Name="NombreProducto" Type="varchar" MaxLength="1000" />
           <Property Name="Detalles" Type="varchar" MaxLength="1000" />
           <Property Name="Precio" Type="float" />
+          <Property Name="Foto" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -51,6 +52,7 @@
           <Property Name="NombreProducto" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
           <Property Name="Detalles" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
           <Property Name="Precio" Type="Double" />
+          <Property Name="Foto" Type="Binary" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -86,6 +88,7 @@
           <EntitySetMapping Name="Portafolio">
             <EntityTypeMapping TypeName="ZapateriaYucModel.Portafolio">
               <MappingFragment StoreEntitySet="Portafolio">
+                <ScalarProperty Name="Foto" ColumnName="Foto" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
                 <ScalarProperty Name="Detalles" ColumnName="Detalles" />

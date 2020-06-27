@@ -1,8 +1,37 @@
-﻿
+﻿@model IEnumerable<PROYECTO_UNIDAD_III.Portafolio>
 @{
     ViewBag.Title = "Portafolio";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Portafolio</h2>
+<!-- Page Heading -->
+<section class="page-section portfolio" id="portafolio">
+    <div class="container">
+        <!-- About Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-gray-800">PORTAFOLIO</h2>
+        <div class="col text-center">
+            <a href="@Url.Action("Add","Admin")" class="btn btn-primary">NUEVO PRODUCTO</a>
+        </div>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="text-gray-800 fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-4">
+
+            @foreach (var item in Model)
+            {
+                <div class="col mb-4">
+                    <a class="portfolio-item mx-auto shadow-sm" href="@Url.Action("Edit","Admin", new { id = item.id })">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-edit fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid h-100 w-100" src="data:image;base64,@System.Convert.ToBase64String(item.Foto)" alt="" />
+                    </a>
+                </div>
+            }
+        </div>
+        </div>
+</section>
 

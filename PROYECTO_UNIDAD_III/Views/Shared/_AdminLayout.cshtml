@@ -289,6 +289,35 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     @RenderBody()
+                    @if (ViewBag.Message != null)
+                    {
+                       <script type="text/javascript">
+                            window.onload = function () {
+                            alert("@ViewBag.Message");  
+                            };
+                        </script>
+
+                    }
+                    <script>
+                        function readFile(input) {
+                            if (input.files && input.files[0]) {
+                                var reader = new FileReader();
+
+                                reader.onload = function (e) {
+                                    var previewZone = document.getElementById('file-preview-zone');
+                                    previewZone.src = e.target.result;
+
+                                }
+
+                                reader.readAsDataURL(input.files[0]);
+                            }
+                        }
+
+                        var fileUpload = document.getElementById('fileinput');
+                        fileUpload.onchange = function (e) {
+                            readFile(e.srcElement);
+                        }
+                    </script>
                 </div>
                 <!-- /.container-fluid -->
 

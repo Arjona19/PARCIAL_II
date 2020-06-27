@@ -26,13 +26,5 @@
                 @Html.TextAreaFor(model => model.Mision, htmlAttributes: new { @class = "form-control", @rows = 7 })
             </div>
         }
-        @if (ViewBag.Message != null)
-        {
-            <script type="text/javascript">
-                window.onload = function () {
-                alert("@ViewBag.Message");
-                };
-            </script>
-
-        }
+       
     </div>
