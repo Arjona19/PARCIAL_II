@@ -1,0 +1,15 @@
+﻿@model ADAS.Models.SopaDeLetrasModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sopa de letras</h2>
+
+@using (Html.BeginForm("arreglo", "SopaDeLetras"))
+{
+    @Html.TextBoxFor(m => m.filas, htmlAttributes: new { @class = "form-control", @placeholder = "Numero de filas", @type="number", @min="1" })
+    @Html.TextBoxFor(m => m.columnas, htmlAttributes: new { @class = "form-control", @placeholder = "Numero de columnas", @type = "number", @min = "1" })
+    <button type="submit" class="btn btn-primary">CREAR</button>
+}
+

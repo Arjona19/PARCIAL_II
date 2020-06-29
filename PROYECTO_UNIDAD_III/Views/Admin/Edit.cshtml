@@ -52,20 +52,9 @@
 
                     <button type="submit" class="btn btn-primary">MODIFICAR PRODUCTO</button>
                     <a href="@Url.Action("Portafolio","Admin")" class="btn btn-warning">CANCELAR MODIFICACIÓN</a>
-                    <button  id="mensajealerta" type="button" class="btn btn-danger text-white">ELIMINAR PRODUCTO</button>
                 }
 
             </div>
-            <script>
-                $('#mensajealerta').click(function () {
-                    alert("Hello World")
-                     var opcion = confirm("ESTA SEGURO QUE DESEA ELIMINAR EL PRODUCTO: @Model.NombreProducto");
-                    if (opcion == true) {
-                        window.location.href = @Url.Action("Portafolio", "Admin");
-                    }
-                });
-
-            </script>
         </div>
 
     </section>

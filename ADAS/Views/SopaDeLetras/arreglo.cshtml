@@ -1,0 +1,32 @@
+﻿@model ADAS.Models.SopaDeLetrasModel
+@{
+    ViewBag.Title = "arreglo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <div class="row">
+        @using (Html.BeginForm("setarreglo", "SopaDeLetras"))
+        {
+        <div class="col">
+            @for (int i = 0; i < Model.sopas_filas.Length; i++)
+            {
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail4">Fila numero @i</label>
+                        @Html.TextBoxFor(m => m.sopas_filas[i], htmlAttributes: new { @maxlength = Model.columnas, @type = "text", @class = "form-control" })
+                    </div>
+                </div>
+            }
+            <label for="inputEmail5">Numero de palabras a buscar</label>
+            @Html.TextBoxFor(m => m.NumeroDePalabrasBuscar, htmlAttributes: new { @class = "form-control", @type = "number"})
+            <button type="submit" class="btn btn-primary">CREAR</button>
+        </div>
+        }
+
+
+    </div>
+</div>
+
+

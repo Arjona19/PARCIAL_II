@@ -142,6 +142,7 @@ namespace PROYECTO_UNIDAD_III.Controllers
             }
             return RedirectToAction("Portafolio", "Admin", new { mensaje = "PRODUCTO REGISTRADO CON EXITO" });
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult EditModify([Bind(Include = "id, NombreProducto, Detalles, Precio")] PortafolioPartialModel autoMapPortafolioModel)
@@ -165,6 +166,34 @@ namespace PROYECTO_UNIDAD_III.Controllers
             return RedirectToAction("Portafolio", "Admin", new { mensaje = "PRODUCTO MODIFICADO CON EXITO" });
         }
 
+
+
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Portafolio portafolio = db.Portafolio.Find(id);
+
+            if (portafolio == null)
+            {
+                return HttpNotFound();
+            }
+            autoMapPortafolioModel = map.Map<Portafolio, PortafolioPartialModel>(portafolio);
+            return View(autoMapPortafolioModel);
+        }
+
+        // POST: Misions/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Portafolio portafolio = db.Portafolio.Find(id);
+            db.Portafolio.Remove(portafolio);
+            db.SaveChanges();
+            return RedirectToAction("Portafolio", "Admin", new { mensaje = "PRODUCTO ELIMINADO CON EXITO" });
+        }
         #endregion
     }
 }

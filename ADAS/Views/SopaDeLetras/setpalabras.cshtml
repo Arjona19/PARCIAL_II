@@ -1,0 +1,11 @@
+﻿@model ADAS.Models.SopaDeLetrasModel
+@{
+    ViewBag.Title = "setpalabras";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (ADAS.Models.ListaBuscarModel objetivos in Model.listaPalabras)
+{
+    <label>@objetivos.palabra()------>@objetivos.veces() veces |</label>
+}
+

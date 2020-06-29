@@ -1,0 +1,59 @@
+﻿@model PROYECTO_UNIDAD_III.Models.PortafolioPartialModel
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<section class="page-section portfolio" id="Add">
+    <div class="container">
+        <!-- Portfolio Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">¿ELIMINAR PRODUCTO?</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Portfolio Grid Items-->
+        <div class="col text-center">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(model => model.id)
+                <div class="row">
+
+                    <div class="col-md-6 mb-5">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        @Html.TextBoxFor(m => m.Fotos64, htmlAttributes: new { @type = "file", @id = "fileinput", @enctype = "multipart/form-data" })
+                        @Html.ValidationMessageFor(m => m.Fotos64, "", new { @class = "text-danger" })
+                        <div class="portfolio-item mx-auto shadow-sm">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-file-image fa-3x"></i></div>
+                            </div>
+                            <img id="file-preview-zone" class="img-fluid h-100 w-100" src="data:image;base64,@System.Convert.ToBase64String(Model.Foto)" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <div class="form-row">
+                            <div class="col-md-7 col-sm-12">
+                                @Html.TextBoxFor(m => m.NombreProducto, htmlAttributes: new { @class = "form-control mb-2", @placeholder = "Nombre del producto" })
+                                @Html.ValidationMessageFor(m => m.NombreProducto, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-5 col-sm-12 mb-3">
+                                @Html.TextBoxFor(m => m.Precio, htmlAttributes: new { @class = "form-control", @type = "number", @placeholder = "Precio" })
+                                @Html.ValidationMessageFor(m => m.Precio, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        @Html.TextAreaFor(m => m.Detalles, htmlAttributes: new { @class = "form-control col-md-12 col-sm-12", @rows = 15, @placeholder = "Agrega una describcion del producto" })
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-danger">ELIMINAR PRODUCTO</button>
+            }
+
+        </div>
+    </div>
+
+</section>
+

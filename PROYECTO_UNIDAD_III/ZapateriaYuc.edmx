@@ -5,6 +5,14 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="ZapateriaYucModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'ZapateriaYuc.dbo.Contacto' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="Contacto">
+          <Property Name="Nombre" Type="varchar" MaxLength="100" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="Telefono" Type="int" />
+          <Property Name="Mensaje" Type="varchar" MaxLength="1000" />
+        </EntityType>-->
         <EntityType Name="Empresa">
           <Key>
             <PropertyRef Name="ID" />
@@ -52,7 +60,7 @@
           <Property Name="NombreProducto" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
           <Property Name="Detalles" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
           <Property Name="Precio" Type="Double" />
-          <Property Name="Foto" Type="Binary" />
+          <Property Name="Foto" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>

@@ -40,7 +40,7 @@ namespace PROYECTO_UNIDAD_III.Controllers
         }
         public ActionResult Portafolio()
         {
-            return View();
+            return View(db.Portafolio.ToList());
         }
 
 
